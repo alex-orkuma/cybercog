@@ -1,16 +1,9 @@
 ---
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Cloud Engineer/Aspiring Enterprise Architect
 comments: false
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+`Nothing in the world can take the place of Persistence.` Talent will not; nothing is more common than unsuccessful men with talent. Genius will not; unrewarded genius is almost a proverb. Education will not; the world is full of educated derelicts. Persistence and Determination alone are omnipotent. The slogan “Press On” has solved and will always solve the problems of the human race
 
-- I rock a great mustache
-- I'm extremely loyal to my family
-
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+Alex _Orkuma_ Shiaondo
