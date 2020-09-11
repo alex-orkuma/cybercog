@@ -4,18 +4,18 @@ DefaultContentLanguage = "en"
 title = "Cyber Cog"
 theme = "beautifulhugo"
 metaDataFormat = "yaml"
-pygmentsStyle = "trac"
+pygmentsStyle = "vim"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 #pygmentsUseClassic = true
 #pygmentOptions = "linenos=inline"
 #disqusShortname = "XXX"
-#googleAnalytics = "XXX"
+googleAnalytics = "UA-177778096-1"
 
 [Params]
 
-# homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
+#homeTitle = "Cyber Cog home of innovative and fast paced tech" # Set a different text for the header on the home page
 
 subtitle = "Learn how to build elegant cloud native solutions"
 mainSections = ["post","posts"]

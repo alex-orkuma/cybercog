@@ -26,7 +26,7 @@
 }
 /* LineHighlight */
 .chroma .hl {
-  background-color: #ffffcc;
+  background-color: #000000;
   display: block;
   width: 100%;
 }
