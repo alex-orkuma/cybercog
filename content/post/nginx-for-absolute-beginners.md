@@ -14,7 +14,7 @@ tags:
 ---
 This guide is the first of a four-part series. Parts One and Two will walk you through installing NGINX Open Source from the NGINX repositories and making some configuration changes to increase performance and security. Parts Three and Four set up NGINX to serve your site over HTTPS and harden the TLS connection
 
-![](/uploads/nginx.png)
+![/uploads/nginx.png](https://app.forestry.io/sites/rmreowx0yfjbvg/body-media//uploads/nginx.png)
 
 ## Before You Begin
 
@@ -64,23 +64,17 @@ Two quick points:
 
 * Before going further, first preserve the default nginx.conf file so you have something to restore to if your customizations get so convoluted that NGINX breaks.
 
-{{< highlight bashrc  >}}
-cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.backup-original
-{{< / highlight >}}
+{{< highlight bashrc  >}} cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.backup-original {{< / highlight >}}
 
 * After implementing a change below, reload your configuration with:
 
-{{< highlight bashrc  >}}
-nginx -s reload
-{{< / highlight >}}
+{{< highlight bashrc  >}} nginx -s reload {{< / highlight >}}
 
 ### Use Multiple Worker Processes
 
 Add or edit the following line in `/etc/nginx/nginx.conf`, in the area just before the `http` block. This is called the `main` block, or context, though it’s not marked in `nginx.conf` like the `http` block is. The first choice would be to set it to `auto`, or the amount of CPU cores available to your server.
 
-{{< highlight bashrc  >}}
-worker_processes auto;
-{{< / highlight >}}
+{{< highlight bashrc  >}} worker_processes auto; {{< / highlight >}}
 
 ### Disable Server Tokens
 
@@ -88,4 +82,4 @@ NGINX’s version number is visible by default with any connection made to the s
 
 Server tokens enabled:
 
-![](/uploads/nginxst.jpg)
+![/uploads/nginxst.jpg](https://app.forestry.io/sites/rmreowx0yfjbvg/body-media//uploads/nginxst.jpg)
