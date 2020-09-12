@@ -1,26 +1,26 @@
 ---
-title: 'Nginx for absolute beginners '
+title: "Nginx for absolute beginners "
 subtitle: Part 1 installion and setup
 date: 2020-09-11T23:00:00.000+00:00
 tags:
-- TSL
-- HTTPS
-- reverse proxy
-- servers
-- beginners
-- deployment
-- nginx
-
+  - TSL
+  - HTTPS
+  - reverse proxy
+  - servers
+  - beginners
+  - deployment
+  - nginx
 ---
+
 This guide is the first of a four-part series. Parts One and Two will walk you through installing NGINX Open Source from the NGINX repositories and making some configuration changes to increase performance and security. Parts Three and Four set up NGINX to serve your site over HTTPS and harden the TLS connection
 
 ![/uploads/nginx.png](https://app.forestry.io/sites/rmreowx0yfjbvg/body-media//uploads/nginx.png)
 
 ## Before You Begin
 
-* You will need root access to the system, or a user account with **sudo** privilege
-* Set your system’s hostname.
-* Update your system
+- You will need root access to the system, or a user account with **sudo** privilege
+- Set your system’s hostname.
+- Update your system
 
 ## Install NGINX
 
@@ -62,11 +62,11 @@ This series will provide configurations that are general enough to be useful in 
 
 Two quick points:
 
-* Before going further, first preserve the default nginx.conf file so you have something to restore to if your customizations get so convoluted that NGINX breaks.
+- Before going further, first preserve the default nginx.conf file so you have something to restore to if your customizations get so convoluted that NGINX breaks.
 
 {{< highlight bashrc  >}} cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.backup-original {{< / highlight >}}
 
-* After implementing a change below, reload your configuration with:
+- After implementing a change below, reload your configuration with:
 
 {{< highlight bashrc  >}} nginx -s reload {{< / highlight >}}
 
@@ -86,3 +86,13 @@ Server tokens enabled:
 
 Server tokens disabled:  
 ![](/uploads/nginxstd.jpg)
+
+Add the following line to the `http` block of `/etc/nginx/nginx.conf:`
+
+{{< highlight bashrc  >}} server_tokens off; {{< / highlight >}}
+
+### Set Your Site’s Root Directory
+
+The directory NGINX serves sites from differs depending on how you installed it. At the time of this writing, NGINX supplied from NGINX Inc.’s repository uses `/usr/share/nginx/`.
+
+The NGINX docs warn that relying on the default location can result in the loss of site data when upgrading NGINX. You should use `/var/www/`, `/srv/`, or some other location that won’t be touched by package or system updates. For more explanation, see [Using the default document root](https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/#using-the-default-document-root) and [Not using standard document root locations](https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/#not-using-standard-document-root-locations).
