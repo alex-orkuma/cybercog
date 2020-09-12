@@ -1,10 +1,12 @@
 ---
 title: Code Sample
 subtitle: Using Hugo or Pygments
-date: 2016-03-08
-tags: ["example", "code"]
----
+date: 2016-03-07T23:00:00+00:00
+tags:
+- example
+- code
 
+---
 The following are two code samples using syntax highlighting.
 
 <!--more-->
