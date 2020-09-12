@@ -4,11 +4,11 @@ DefaultContentLanguage = "en"
 title = "Cyber Cog"
 theme = "beautifulhugo"
 metaDataFormat = "yaml"
-pygmentsStyle = "vim"
+#pygmentsStyle = "vim"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
-#pygmentsUseClassic = true
+pygmentsUseClassic = true
 #pygmentOptions = "linenos=inline"
 #disqusShortname = "XXX"
 googleAnalytics = "UA-177778096-1"
