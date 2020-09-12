@@ -60,7 +60,7 @@
   color: #0086b3;
 }
 .hljs-meta {
-  color: #999;
+  color: rgb(255, 254, 254);
   font-weight: bold;
 }
 .hljs-deletion {
