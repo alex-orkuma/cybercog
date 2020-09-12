@@ -4,16 +4,17 @@ DefaultContentLanguage = "en"
 title = "Cyber Cog"
 theme = "beautifulhugo"
 metaDataFormat = "yaml"
-#pygmentsStyle = "vim"
-pygmentsUseClasses = true
+pygmentsStyle = "vim"
+#pygmentsUseClasses = true
 pygmentsCodeFences = true
-pygmentsCodefencesGuessSyntax = true
+#pygmentsCodefencesGuessSyntax = true
 pygmentsUseClassic = true
 #pygmentOptions = "linenos=inline"
 #disqusShortname = "XXX"
 googleAnalytics = "UA-177778096-1"
 
 [Params]
+
 
 #homeTitle = "Cyber Cog home of innovative and fast paced tech" # Set a different text for the header on the home page
 
