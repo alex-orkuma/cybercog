@@ -1,26 +1,26 @@
 ---
-title: "Nginx for absolute beginners "
+title: 'Nginx for absolute beginners '
 subtitle: Part 1 installion and setup
-date: 2020-09-11T23:00:00+00:00
+date: 2020-09-11T23:00:00.000+00:00
 tags:
-  - TSL
-  - HTTPS
-  - reverse proxy
-  - servers
-  - beginners
-  - deployment
-  - nginx
----
+- TSL
+- HTTPS
+- reverse proxy
+- servers
+- beginners
+- deployment
+- nginx
 
+---
 This guide is the first of a four-part series. Parts One and Two will walk you through installing NGINX Open Source from the NGINX repositories and making some configuration changes to increase performance and security. Parts Three and Four set up NGINX to serve your site over HTTPS and harden the TLS connection
 
 ![](/uploads/nginx.png)
 
 ## Before You Begin
 
-- You will need root access to the system, or a user account with **sudo** privilege
-- Set your system’s hostname.
-- Update your system
+* You will need root access to the system, or a user account with **sudo** privilege
+* Set your system’s hostname.
+* Update your system
 
 ## Install NGINX
 
@@ -62,13 +62,13 @@ This series will provide configurations that are general enough to be useful in 
 
 Two quick points:
 
-- Before going further, first preserve the default nginx.conf file so you have something to restore to if your customizations get so convoluted that NGINX breaks.
+* Before going further, first preserve the default nginx.conf file so you have something to restore to if your customizations get so convoluted that NGINX breaks.
 
 {{< highlight bashrc  >}}
 cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.backup-original
 {{< / highlight >}}
 
-- After implementing a change below, reload your configuration with:
+* After implementing a change below, reload your configuration with:
 
 {{< highlight bashrc  >}}
 nginx -s reload
@@ -88,10 +88,4 @@ NGINX’s version number is visible by default with any connection made to the s
 
 Server tokens enabled:
 
-<div className="Image__Small">
-  <img
-    src="./static/uploads/nginxst.jpg"
-    title="Server tokens enabled"
-    alt="Alt text"
-  />
-</div>
+![](/uploads/nginxst.jpg)
