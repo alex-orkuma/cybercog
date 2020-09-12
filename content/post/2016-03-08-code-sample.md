@@ -11,7 +11,7 @@ The following are two code samples using syntax highlighting.
 
 <!--more-->
 
-The following is a code sample using triple backticks ( ``` ) code fencing provided in Hugo. This is client side highlighting and does not require any special installation.
+The following is a code sample using triple backticks ( \`\`\` ) code fencing provided in Hugo. This is client-side highlighting and does not require any special installation.
 
 ```javascript
 var num1, num2, sum;
