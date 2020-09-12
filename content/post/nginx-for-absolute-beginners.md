@@ -83,3 +83,5 @@ NGINX’s version number is visible by default with any connection made to the s
 Server tokens enabled:
 
 ![/uploads/nginxst.jpg](https://app.forestry.io/sites/rmreowx0yfjbvg/body-media//uploads/nginxst.jpg)
+
+Server tokens disabled:
