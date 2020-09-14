@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "cybercog.co"
 DefaultContentLanguage = "en"
 #DefaultContentLanguage = "ja"
 title = "Cyber Cog"
@@ -28,7 +28,7 @@ rss = true
 comments = true
 readingTime = true
 wordCount = true
-useHLJS = true
+useHLJS = false
 socialShare = true
 delayDisqus = true
 showRelatedPosts = true
