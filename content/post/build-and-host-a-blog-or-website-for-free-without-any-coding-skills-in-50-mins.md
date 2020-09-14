@@ -78,3 +78,9 @@ This tutorial was done using Ubuntu 20.04, the steps to install Golang on your O
       * remove the # at the back of _hideAuthor = true_ and change the true to false if you want your name to show on every article. 
       * in the **author** section, put all your social media details there if you want to. 
       * The menu.main represent all the menu on the navbar, removing or adding will remove or add a new menu to the navbar, and of course the URL points to a particular page or post so be sure to configure it appropriately 
+      * After modifying, type 
+
+            hugo serve
+
+        ![](/uploads/screenshot-from-2020-09-14-16-42-01.png)
+      * use see the above output in your terminal, navigate to your browser and type **_localhost:1313 _**to view ur customized website. 
