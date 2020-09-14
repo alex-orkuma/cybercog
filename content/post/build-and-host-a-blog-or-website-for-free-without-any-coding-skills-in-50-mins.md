@@ -1,5 +1,5 @@
 ---
-title: Build and Host a Blog or Website for Free Without any Coding Skills in 50 mins
+title: Build and Host a Blog or Website for Free Without any Coding Skills
 subtitle: Learn how build a hugo website or blog for free.
 date: 2020-09-13T23:00:00+00:00
 tags:
@@ -106,25 +106,25 @@ hugo serve
 
 ![](/uploads/screenshot-from-2020-09-14-16-42-01.png)
 
-- use see the above output in your terminal, navigate to your browser and type **_localhost:1313 _**to view ur customized website.
+- use see the above output in your terminal, navigate to your browser and type **_localhost:1313_**to view ur customized website.
 
 ### Modifying the Look and Feel of the site.
 
 To modify the colors and the look of the site, start with the css files
 
-#### CSS files. !
+#### CSS files.
 
-[](/uploads/css.png)
+![](/uploads/css.png)
 
 - The **main.css** takes care of the styling when you deploy it to production (that is when you host it on a platform say [Netlify](www.netlify.com))
 - **fonts.css** takes care of the font formatting, **syntax.css**, **codeblock.css**, and **highlight.css** all take of code formatting depending on the option you selected in the **config.toml** file.
 - **hugo.easy.gallery.css** and **photoswipe.min.css** handle the formatting of pictures on the website.
 
-  #### The Html Files
+#### The Html Files
 
-  ![](/uploads/html.png)
+![](/uploads/html.png)
 
-  To add and remove components on the website, the HTML pages are your best bet.
+To add and remove components on the website, the HTML pages are your best bet.
 
 - All the header related templates deal with the headers
 - The nav.html takes care of the navigation bar. To add or remove components on the navbar, modify the nav.html
