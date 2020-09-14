@@ -77,7 +77,7 @@ This tutorial was done using Ubuntu 20.04, the steps to install Golang on your O
       * put your logo into the image folder, and change the logo section to point to your own logo. 
       * remove the # at the back of _hideAuthor = true_ and change the true to false if you want your name to show on every article. 
       * in the **author** section, put all your social media details there if you want to. 
-      * The menu.main represent all the menu on the navbar, removing or adding will remove or add a new menu to the navbar, and of course the URL points to a particular page or post so be sure to configure it appropriately 
+      * The menu.main represent all the menu on the navbar, removing or adding will remove or add a new menu to the navbar, and of course, the URL points to a particular page or post so be sure to configure it appropriately 
       * After modifying, type 
 
             hugo serve
@@ -86,3 +86,10 @@ This tutorial was done using Ubuntu 20.04, the steps to install Golang on your O
       * use see the above output in your terminal, navigate to your browser and type **_localhost:1313 _**to view ur customized website. 
 
       ### Modifying the Look and Feel of the site.
+
+      To modify the colors and the look of the site, start with the css files
+
+      #### CSS files. ![](/uploads/css.png)
+    * The **main.css** takes care of the styling when you deploy it to production (that is when you host it on a platform say [Netlify](www.netlify.com))
+    * **fonts.css** takes care of the font formatting, **syntax.css**, **codeblock.css**, and **highlight.css** all take of code formatting depending on the option you selected in the **config.toml** file. 
+    * hugo.easy.gallery.css and photoswipe.min.css handle the formatting of pictures on the website. 
