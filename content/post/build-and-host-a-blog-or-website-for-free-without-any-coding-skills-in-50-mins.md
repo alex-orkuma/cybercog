@@ -100,5 +100,5 @@ This tutorial was done using Ubuntu 20.04, the steps to install Golang on your O
 
       To add and remove components on the website, the HTML pages are your best bet. 
     * All the header related templates deal with the headers
-    * The nav.html takes care of the navigation bar. to add or remove components on the navbar, modify the  nav.html
+    * The nav.html takes care of the navigation bar. To add or remove components on the navbar, modify the  nav.html
     * as you would expect all the post.htm related handles the post section 
