@@ -9,17 +9,17 @@ tags:
 draft: true
 
 ---
-**Before We Start**
+## **Before We Start**
 
-here are a couple of things to keep in mind. 
+here are a couple of things to keep in mind.
 
 this is going to be a static website built using [Hugo](https://gohugo.io/documentation/). for a difference between static and dynamic websites read this [article](https://wpamelia.com/static-vs-dynamic-website/#:\~:text=Static%20websites%20are%20ones%20that,databases%20in%20addition%20to%20HTML.).
 
-For this tutorial to work, you need to install Hugo and Golang if you don't already have it installed. 
+For this tutorial to work, you need to install Hugo and Golang if you don't already have it installed.
 
-**Installing Golang**
+## **Installing Golang**
 
-This tutorial was done using Ubuntu 20.04, the steps to install Golang on your OS might differ. Please refer to the [documentation](https://golang.org/doc/install?download=go1.15.2.linux-amd64.tar.gz#install) for your own use case
+This tutorial was done using Ubuntu 20.04, the steps to install Golang on your OS might differ. Please refer to the [documentation](https://golang.org/doc/install?download=go1.15.2.linux-amd64.tar.gz#install) for your use case
 
 * download Golang here [Go](https://golang.org/dl/go1.15.2.linux-amd64.tar.gz "Go")
 * extract it into /usr/local, creating a Go tree in /usr/local/go
@@ -27,4 +27,14 @@ This tutorial was done using Ubuntu 20.04, the steps to install Golang on your O
       tar -C /usr/local -xzf go1.15.2.linux-amd64.tar.gz
 * Add /usr/local/go/bin to the `PATH` environment variable
 
-      export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin
+
+* Verify that you've installed Go by opening a command prompt and typing the following command
+
+  $ go version
+
+  ## Installing Hugo
+  * To install Hugo on Ubuntu, use
+
+    sudo apt-get install hugo
+  * to install Hugo on other OS, refer to the [docs](https://gohugo.io/getting-started/installing/ "Install Hugo")
