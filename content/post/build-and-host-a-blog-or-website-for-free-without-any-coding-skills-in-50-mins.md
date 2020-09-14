@@ -95,3 +95,10 @@ This tutorial was done using Ubuntu 20.04, the steps to install Golang on your O
     * **hugo.easy.gallery.css** and **photoswipe.min.css** handle the formatting of pictures on the website. 
 
       #### The Html Files
+
+      ![](/uploads/html.png)
+
+      To add and remove components on the website, the HTML pages are your best bet. 
+    * All the header related templates deal with the headers
+    * The nav.html takes care of the navigation bar. to add or remove components on the navbar, modify the  nav.html
+    * as you would expect all the post.htm related handles the post section 
