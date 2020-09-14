@@ -1,4 +1,4 @@
-baseurl = "cybercog.co"
+baseurl = "/"
 DefaultContentLanguage = "en"
 #DefaultContentLanguage = "ja"
 title = "Cyber Cog"

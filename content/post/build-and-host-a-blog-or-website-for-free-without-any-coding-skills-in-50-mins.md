@@ -81,7 +81,7 @@ git init //git init command creates a new Git repository.
 
   ## Customizing the site.
 
-  - First navigate to theme, beautifulhugo, exampleSite and then content folder. Copy the post and the page folder from content and pate it in the content folder of your main site.
+  - First navigate to theme, beautifulhugo, exampleSite and then content folder. Copy the post and the page folder from content and paste it in the content folder of your main site.
   - Copy the config.toml file from the exampleSite folder and replace it with the one in your main site folder. in my case my main site folder is sadaxx.
 
     ### Modifying the Config file
@@ -96,7 +96,7 @@ git init //git init command creates a new Git repository.
   - _disqusShortname_ enables comments on your website. replace the xxx with your Disqus shortname.
   - in the params section, change the subtitle to whatever you want
   - put your logo into the image folder, and change the logo section to point to your own logo.
-  - remove the # at the back of _hideAuthor = true_ and change the true to false if you want your name to show on every article.
+  - remove the # at the back of _hideAuthor = true_ and change the true to _false_ if you want your name to show on every article.
   - in the **author** section, put all your social media details there if you want to.
   - The menu.main represent all the menu on the navbar, removing or adding will remove or add a new menu to the navbar, and of course, the URL points to a particular page or post so be sure to configure it appropriately
   - After modifying, type
