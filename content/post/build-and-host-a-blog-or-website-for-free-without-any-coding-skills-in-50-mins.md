@@ -84,3 +84,5 @@ This tutorial was done using Ubuntu 20.04, the steps to install Golang on your O
 
         ![](/uploads/screenshot-from-2020-09-14-16-42-01.png)
       * use see the above output in your terminal, navigate to your browser and type **_localhost:1313 _**to view ur customized website. 
+
+      ### Modifying the Look and Feel of the site.
