@@ -1,5 +1,5 @@
 ---
-title: Build and Host a Blog or Website for Free Without any Coding Skills
+title: Build and Host a Blog or Website for Free Without any Coding Skills Part 1
 subtitle: Learn how build a hugo website or blog for free.
 date: 2020-09-13T23:00:00+00:00
 tags:
@@ -12,7 +12,9 @@ tags:
 
 here are a couple of things to keep in mind.
 
-this is going to be a static website built using [Hugo](https://gohugo.io/documentation/). for a difference between static and dynamic websites read this [article](https://wpamelia.com/static-vs-dynamic-website/#:~:text=Static%20websites%20are%20ones%20that,databases%20in%20addition%20to%20HTML.).
+- You need a github account. signup [here](https://github.com/signup)
+
+- this is going to be a static website built using [Hugo](https://gohugo.io/documentation/). for a difference between static and dynamic websites read this [article](https://wpamelia.com/static-vs-dynamic-website/#:~:text=Static%20websites%20are%20ones%20that,databases%20in%20addition%20to%20HTML.).
 
 For this tutorial to work, you need to install Hugo and Golang if you don't already have it installed.
 
@@ -129,3 +131,5 @@ To add and remove components on the website, the HTML pages are your best bet.
 - All the header related templates deal with the headers
 - The nav.html takes care of the navigation bar. To add or remove components on the navbar, modify the nav.html
 - as you would expect all the post.html related handles the post section
+
+The second part of this post will tackle deployment, buying and attaching a domain name to the website.
