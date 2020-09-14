@@ -34,14 +34,13 @@ export PATH=\$PATH:/usr/local/go/bin
 {{< / highlight >}}
 
 - Verify that you've installed Go by opening a command prompt and typing the following command
+  {{< highlight shell  >}}
+  sudo apt-get install hugo
+  {{< / highlight >}}
 
-      ```shell
-          $ go version
-      ```
+## Installing Hugo
 
-  ## Installing Hugo
-
-  - To install Hugo on Ubuntu, use
+- To install Hugo on Ubuntu, use
 
 {{< highlight bashrc  >}}
 sudo apt-get install hugo
@@ -49,9 +48,9 @@ sudo apt-get install hugo
 
 - to install Hugo on other OS, refer to the [docs](https://gohugo.io/getting-started/installing/ "Install Hugo")
 
-  ## Create the website
+## Create the website
 
-  - on your terminal, type the following command
+- on your terminal, type the following command
 
 {{< highlight bashrc  >}}
 hugo new site yousite_name
