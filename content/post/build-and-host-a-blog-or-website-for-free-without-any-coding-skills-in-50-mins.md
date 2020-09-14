@@ -14,7 +14,7 @@ here are a couple of things to keep in mind.
 
 - You need a github account. signup [here](https://github.com/signup)
 
-- this is going to be a static website built using [Hugo](https://gohugo.io/documentation/). for a difference between static and dynamic websites read this [article](https://wpamelia.com/static-vs-dynamic-website/#:~:text=Static%20websites%20are%20ones%20that,databases%20in%20addition%20to%20HTML.).
+- this is going to be a static website built using [Hugo](https://gohugo.io/documentation/). for the difference between static and dynamic websites read this [article](https://wpamelia.com/static-vs-dynamic-website/#:~:text=Static%20websites%20are%20ones%20that,databases%20in%20addition%20to%20HTML.).
 
 For this tutorial to work, you need to install Hugo and Golang if you don't already have it installed.
 
@@ -24,16 +24,14 @@ This tutorial was done using Ubuntu 20.04, the steps to install Golang on your O
 
 - download Golang here [Go](https://golang.org/dl/go1.15.2.linux-amd64.tar.gz "Go")
 - extract it into /usr/local, creating a Go tree in /usr/local/go
-
-{{< highlight bashrc  >}}
-tar -C /usr/local -xzf go1.15.2.linux-amd64.tar.gz
-{{< / highlight >}}
+  {{< highlight bashrc  >}}
+  tar -C /usr/local -xzf go1.15.2.linux-amd64.tar.gz
+  {{< / highlight >}}
 
 - Add /usr/local/go/bin to the `PATH` environment variable
-
-{{< highlight bashrc  >}}
-export PATH=\$PATH:/usr/local/go/bin
-{{< / highlight >}}
+  {{< highlight bashrc  >}}
+  export PATH=\$PATH:/usr/local/go/bin
+  {{< / highlight >}}
 
 - Verify that you've installed Go by opening a command prompt and typing the following command
   {{< highlight bashrc  >}}
@@ -43,30 +41,27 @@ export PATH=\$PATH:/usr/local/go/bin
 ## Installing Hugo
 
 - To install Hugo on Ubuntu, use
-
-{{< highlight bashrc  >}}
-sudo apt-get install hugo
-{{< / highlight >}}
+  {{< highlight bashrc  >}}
+  sudo apt-get install hugo
+  {{< / highlight >}}
 
 - to install Hugo on other OS, refer to the [docs](https://gohugo.io/getting-started/installing/ "Install Hugo")
 
 ## Create the website
 
 - on your terminal, type the following command
-
-{{< highlight go  >}}
-hugo new site yousite_name
-{{< / highlight >}}
+  {{< highlight go  >}}
+  hugo new site yousite_name
+  {{< / highlight >}}
 
 - if everything goes well, you should see the following output. ![](/uploads/screenshot-from-2020-09-14-15-25-53.png)
 - then type the following
+  {{< highlight bashrc  >}}
+  cd yousite_name #change directory to your site name
+  git init #git init command creates a new Git repository.
+  {{< / highlight >}}
 
-{{< highlight bashrc  >}}
-cd yousite_name #change directory to your site name
-git init #git init command creates a new Git repository.
-{{< / highlight >}}
-
-- Visit the Hugo [themes](https://themes.gohugo.io/ "Themes") site and pick any theme of your choice. Don't worry you will customize it to your taste. For the sake of this tutorial, I am using beautiful hugo theme, it is the same theme I am using for my website.
+- Visit the Hugo [themes](https://themes.gohugo.io/ "Themes") site and pick any theme of your choice. Don't worry you will customize it to your taste. For the sake of this tutorial, I am using beautiful hugo theme.
 - After picking your favorite theme, download it by clicking the download button on the theme's home screen. It should take you directly to the Github repo of the theme.
 
   ![](/uploads/screenshot-from-2020-09-14-15-41-54.png)
@@ -87,13 +82,13 @@ git init #git init command creates a new Git repository.
 
 ### Modifying the Config file
 
-there are a lot of things in the config file but I am going to my best to explain the important ones.
+there are a lot of things in the config file but I am going to try my best to explain the important ones.
 
 - change the baseURL to the domain name of your site if you have one or just change it to a forward slash (/) if you don't have.
 - change the title to the title of your site
 - leave the theme name as it is
-- pygmentsStyle, _pygmentsUseClasses_ ,_pygmentsCodeFences_, _pygmentsCodefencesGuessSyntax_, _pygmentsUseClassic, pygmentOptions,_ are all used for code highlighting in your website. We won't get into this right now, this is a whole new blog post of its own for now leave the settings as it is.
-- googleanylicts is to add googleanylicts to your website. replace the xxx with your tracking id. You can signup for google analytics for free and obtain the tracking id. It keeps track of how many people visit your site and from where.
+- pygmentsStyle, _pygmentsUseClasses_ ,_pygmentsCodeFences_, _pygmentsCodefencesGuessSyntax_, _pygmentsUseClassic, pygmentOptions,_ are all used for code highlighting in your website. We won't get into this right now, this is a whole new blog post of its own for now leave the settings as it is we will discuss them in a seperate blog post.
+- Google Analytics is to add Google Analytics to your website. replace the **xxx** with your tracking id. You can signup for google analytics for free and obtain the tracking id. It keeps track of how many people visit your site and from where.
 - _disqusShortname_ enables comments on your website. replace the xxx with your Disqus shortname.
 - in the params section, change the subtitle to whatever you want
 - put your logo into the image folder, and change the logo section to point to your own logo.
