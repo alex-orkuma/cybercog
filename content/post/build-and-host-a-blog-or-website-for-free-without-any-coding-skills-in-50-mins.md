@@ -48,11 +48,14 @@ This tutorial was done using Ubuntu 20.04, the steps to install Golang on your O
 
         cd yousite_name  //change directory to your site name
         git init   //git init command creates a new Git repository.
-    * Visit hugo [themes](https://themes.gohugo.io/ "Themes") site and pick any theme of your choice. Don't worry you will customize it to your taste. For the sake of this tutorial, I am using beautiful hugo theme, it is the same theme I have used for my website. 
+    * Visit the Hugo [themes](https://themes.gohugo.io/ "Themes") site and pick any theme of your choice. Don't worry you will customize it to your taste. For the sake of this tutorial, I am using beautiful hugo theme, it is the same theme I have used for my website. 
     * After picking your favorite theme, download it by clicking the download button on the theme's home screen. It should take you directly to the Github repo of the theme. 
 
       ![](/uploads/screenshot-from-2020-09-14-15-41-54.png)
     * Download as zip, unzip it and rename the folder removing the master at the end of the folder name.
 
       ![](/uploads/a.png)
-    * 
+    * copy the folder to your website directory you created initially and put it under themes.
+    * At this stage, your folder structure should look like this.
+
+      ![](/uploads/screenshot-from-2020-09-14-15-55-33.png)
