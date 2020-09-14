@@ -34,7 +34,7 @@ export PATH=\$PATH:/usr/local/go/bin
 {{< / highlight >}}
 
 - Verify that you've installed Go by opening a command prompt and typing the following command
-  {{< highlight shell  >}}
+  {{< highlight bashrc  >}}
   sudo apt-get install hugo
   {{< / highlight >}}
 
@@ -52,7 +52,7 @@ sudo apt-get install hugo
 
 - on your terminal, type the following command
 
-{{< highlight bashrc  >}}
+{{< highlight go  >}}
 hugo new site yousite_name
 {{< / highlight >}}
 
@@ -60,11 +60,11 @@ hugo new site yousite_name
 - then type the following
 
 {{< highlight bashrc  >}}
-cd yousite_name //change directory to your site name
-git init //git init command creates a new Git repository.
+cd yousite_name #change directory to your site name
+git init #git init command creates a new Git repository.
 {{< / highlight >}}
 
-- Visit the Hugo [themes](https://themes.gohugo.io/ "Themes") site and pick any theme of your choice. Don't worry you will customize it to your taste. For the sake of this tutorial, I am using beautiful hugo theme, it is the same theme I have used for my website.
+- Visit the Hugo [themes](https://themes.gohugo.io/ "Themes") site and pick any theme of your choice. Don't worry you will customize it to your taste. For the sake of this tutorial, I am using beautiful hugo theme, it is the same theme I am using for my website.
 - After picking your favorite theme, download it by clicking the download button on the theme's home screen. It should take you directly to the Github repo of the theme.
 
   ![](/uploads/screenshot-from-2020-09-14-15-41-54.png)
@@ -78,39 +78,43 @@ git init //git init command creates a new Git repository.
 
   ![](/uploads/screenshot-from-2020-09-14-15-55-33.png)
 
-  ## Customizing the site.
+## Customizing the site.
 
-  - First navigate to theme, beautifulhugo, exampleSite and then content folder. Copy the post and the page folder from content and paste it in the content folder of your main site.
-  - Copy the config.toml file from the exampleSite folder and replace it with the one in your main site folder. in my case my main site folder is sadaxx.
+- First navigate to theme, beautifulhugo, exampleSite and then content folder. Copy the post and the page folder from content and paste it in the content folder of your main site.
+- Copy the config.toml file from the exampleSite folder and replace it with the one in your main site folder. in my case my main site folder is sadaxx.
 
-    ### Modifying the Config file
+### Modifying the Config file
 
-    there are a lot of things in the config file but I am going to my best to explain the important ones.
+there are a lot of things in the config file but I am going to my best to explain the important ones.
 
-  - change the baseURL to the domain name of your site if you have one or just change it to a forward slash (/) if you don't have.
-  - change the title to the title of your site
-  - leave the theme name as it is
-  - pygmentsStyle, _pygmentsUseClasses_ ,_pygmentsCodeFences_, _pygmentsCodefencesGuessSyntax_, _pygmentsUseClassic, pygmentOptions,_ are all used for code highlighting in your website. We won't get into this right now, this is a whole new blog post of its own for now leave the settings as it is.
-  - googleanylicts is to add googleanylicts to your website. replace the xxx with your tracking id. You can signup for google analytics for free and obtain the tracking id. It keeps track of how many people visit your site and from where.
-  - _disqusShortname_ enables comments on your website. replace the xxx with your Disqus shortname.
-  - in the params section, change the subtitle to whatever you want
-  - put your logo into the image folder, and change the logo section to point to your own logo.
-  - remove the # at the back of _hideAuthor = true_ and change the true to _false_ if you want your name to show on every article.
-  - in the **author** section, put all your social media details there if you want to.
-  - The menu.main represent all the menu on the navbar, removing or adding will remove or add a new menu to the navbar, and of course, the URL points to a particular page or post so be sure to configure it appropriately
-  - After modifying, type
+- change the baseURL to the domain name of your site if you have one or just change it to a forward slash (/) if you don't have.
+- change the title to the title of your site
+- leave the theme name as it is
+- pygmentsStyle, _pygmentsUseClasses_ ,_pygmentsCodeFences_, _pygmentsCodefencesGuessSyntax_, _pygmentsUseClassic, pygmentOptions,_ are all used for code highlighting in your website. We won't get into this right now, this is a whole new blog post of its own for now leave the settings as it is.
+- googleanylicts is to add googleanylicts to your website. replace the xxx with your tracking id. You can signup for google analytics for free and obtain the tracking id. It keeps track of how many people visit your site and from where.
+- _disqusShortname_ enables comments on your website. replace the xxx with your Disqus shortname.
+- in the params section, change the subtitle to whatever you want
+- put your logo into the image folder, and change the logo section to point to your own logo.
+- remove the # at the back of _hideAuthor = true_ and change the true to _false_ if you want your name to show on every article.
+- in the **author** section, put all your social media details there if you want to.
+- The menu.main represent all the menu on the navbar, removing or adding will remove or add a new menu to the navbar, and of course, the URL points to a particular page or post so be sure to configure it appropriately
+- After modifying, type
 
-        hugo serve
+{{< highlight go  >}}
+hugo serve
+{{< / highlight >}}
 
-    ![](/uploads/screenshot-from-2020-09-14-16-42-01.png)
+![](/uploads/screenshot-from-2020-09-14-16-42-01.png)
 
-  - use see the above output in your terminal, navigate to your browser and type **_localhost:1313 _**to view ur customized website.
+- use see the above output in your terminal, navigate to your browser and type **_localhost:1313 _**to view ur customized website.
 
-  ### Modifying the Look and Feel of the site.
+### Modifying the Look and Feel of the site.
 
-  To modify the colors and the look of the site, start with the css files
+To modify the colors and the look of the site, start with the css files
 
-  #### CSS files. ![](/uploads/css.png)
+#### CSS files. !
+
+[](/uploads/css.png)
 
 - The **main.css** takes care of the styling when you deploy it to production (that is when you host it on a platform say [Netlify](www.netlify.com))
 - **fonts.css** takes care of the font formatting, **syntax.css**, **codeblock.css**, and **highlight.css** all take of code formatting depending on the option you selected in the **config.toml** file.
