@@ -27,14 +27,32 @@ This tutorial was done using Ubuntu 20.04, the steps to install Golang on your O
       tar -C /usr/local -xzf go1.15.2.linux-amd64.tar.gz
 * Add /usr/local/go/bin to the `PATH` environment variable
 
-export PATH=$PATH:/usr/local/go/bin
+    export PATH=$PATH:/usr/local/go/bin
 
 * Verify that you've installed Go by opening a command prompt and typing the following command
 
-  $ go version
+      $ go version
 
   ## Installing Hugo
   * To install Hugo on Ubuntu, use
 
-    sudo apt-get install hugo
+        sudo apt-get install hugo
   * to install Hugo on other OS, refer to the [docs](https://gohugo.io/getting-started/installing/ "Install Hugo")
+
+    ## Create the website
+    * on your terminal, type the following command
+
+        hugo new site yousite_name
+  * if everything goes well, you should see the following output. ![](/uploads/screenshot-from-2020-09-14-15-25-53.png)
+  * then type the following 
+
+        cd yousite_name  //change directory to your site name
+        git init   //git init command creates a new Git repository.
+    * Visit hugo [themes](https://themes.gohugo.io/ "Themes") site and pick any theme of your choice. Don't worry you will customize it to your taste. For the sake of this tutorial, I am using beautiful hugo theme, it is the same theme I have used for my website. 
+    * After picking your favorite theme, download it by clicking the download button on the theme's home screen. It should take you directly to the Github repo of the theme. 
+
+      ![](/uploads/screenshot-from-2020-09-14-15-41-54.png)
+    * Download as zip, unzip it and rename the folder removing the master at the end of the folder name.
+
+      ![](/uploads/a.png)
+    * 
