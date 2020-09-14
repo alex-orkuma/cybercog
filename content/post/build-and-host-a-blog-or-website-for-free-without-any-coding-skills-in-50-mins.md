@@ -73,3 +73,5 @@ This tutorial was done using Ubuntu 20.04, the steps to install Golang on your O
       * pygmentsStyle, _pygmentsUseClasses_ ,_pygmentsCodeFences_, _pygmentsCodefencesGuessSyntax_, _pygmentsUseClassic, pygmentOptions,_  are all used for code highlighting in your website. We won't get into this right now, this is a whole new blog post of its own for now leave the settings as it is. 
       * googleanylicts is to add googleanylicts to your website. replace the xxx with your tracking id. You can signup for google analytics for free and obtain the tracking id. It keeps track of how many people visit your site and from where.
       * _disqusShortname_ enables comments on your website. replace the xxx with your Disqus shortname. 
+      * in the params section, change the subtitle to whatever you want
+      * put your logo into the image folder and change the logo section to point to your own logo.
