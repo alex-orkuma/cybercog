@@ -74,4 +74,5 @@ This tutorial was done using Ubuntu 20.04, the steps to install Golang on your O
       * googleanylicts is to add googleanylicts to your website. replace the xxx with your tracking id. You can signup for google analytics for free and obtain the tracking id. It keeps track of how many people visit your site and from where.
       * _disqusShortname_ enables comments on your website. replace the xxx with your Disqus shortname. 
       * in the params section, change the subtitle to whatever you want
-      * put your logo into the image folder and change the logo section to point to your own logo.
+      * put your logo into the image folder, and change the logo section to point to your own logo. 
+      * remove the # at the back of _hideAuthor = true_ and change the true to false if you want your name to show on every article. 
