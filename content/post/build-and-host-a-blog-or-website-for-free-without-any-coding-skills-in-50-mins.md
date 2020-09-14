@@ -59,3 +59,7 @@ This tutorial was done using Ubuntu 20.04, the steps to install Golang on your O
     * At this stage, your folder structure should look like this.
 
       ![](/uploads/screenshot-from-2020-09-14-15-55-33.png)
+
+      ## Customizing the site.
+      * First navigate into the theme folder, beautifulhugo, exampleSite, content. Copy the post and the page folder from content and pate it in the content folder of your main site.
+      * Copy the config.toml file from the exampleSite folder and replace it with the one in your main site folder. in my case my main site folder is sadaxx.
