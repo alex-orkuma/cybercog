@@ -6,7 +6,6 @@ tags:
 - beginner
 - blog
 - Hugo
-draft: true
 
 ---
 ## **Before We Start**
