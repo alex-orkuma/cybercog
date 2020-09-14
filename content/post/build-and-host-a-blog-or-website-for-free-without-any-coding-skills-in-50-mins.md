@@ -92,4 +92,4 @@ This tutorial was done using Ubuntu 20.04, the steps to install Golang on your O
       #### CSS files. ![](/uploads/css.png)
     * The **main.css** takes care of the styling when you deploy it to production (that is when you host it on a platform say [Netlify](www.netlify.com))
     * **fonts.css** takes care of the font formatting, **syntax.css**, **codeblock.css**, and **highlight.css** all take of code formatting depending on the option you selected in the **config.toml** file. 
-    * hugo.easy.gallery.css and photoswipe.min.css handle the formatting of pictures on the website. 
+    * **hugo.easy.gallery.css** and **photoswipe.min.css** handle the formatting of pictures on the website. 
