@@ -66,7 +66,7 @@ This tutorial was done using Ubuntu 20.04, the steps to install Golang on your O
         ### Modifying the Config file
 
         there are a lot of things in the config file but  I am going to my best to explain the important ones. 
-      * change the baseURL to the domain name of your site if you have one or just change it to a forward slash (/) if you don't have 
+      * change the baseURL to the domain name of your site if you have one or just change it to a forward slash (/) if you don't have.
       * change the title to the title of your site
       * leave the theme name as it is
       * pygmentsStyle, _pygmentsUseClasses_ ,_pygmentsCodeFences_, _pygmentsCodefencesGuessSyntax_, _pygmentsUseClassic, pygmentOptions,_  are all used for code highlighting in your website. We won't get into this right now, this is a whole new blog post of its own for now leave the settings as it is. 
