@@ -46,7 +46,7 @@ In this tutorial we are going to talk about how to deploy our blog from the prev
   {{< / highlight >}}
   your code will be pushed to your github account.
 
-  ## Deploying your Website to Netlify
+## Deploying your Website to Netlify
 
 - Visit [Netlify](netlify.com) then click on signin
 - From the signin options, select sigin through gihub
