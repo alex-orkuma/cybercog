@@ -1,7 +1,7 @@
 ---
 title: From Containers to Kubernetes an all in One Beginners Guide Part 1
 subtitle: Containers
-date: 2020-09-26T23:00:00+00:00
+date: 2020-09-27T20:21:00+00:00
 tags:
 - LXC
 - LXD
