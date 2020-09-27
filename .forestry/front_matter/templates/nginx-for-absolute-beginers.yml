@@ -16,4 +16,5 @@ fields:
   label: tags
 pages:
 - content/post/build-and-host-a-blog-or-website-for-free-without-any-coding-skills-in-50-mins.md
+- content/post/from-containers-to-kubernetes-an-all-in-one-beginners-guide-part-1.md
 - content/post/nginx-for-absolute-beginners.md
