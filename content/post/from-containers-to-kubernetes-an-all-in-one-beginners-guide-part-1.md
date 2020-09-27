@@ -118,6 +118,6 @@ A typical example of a docker image looks like this
 
 From the Dockerfile above you can see the different type of images will discuss above. This whole Dockerfile will be built into an **application image**. The **node 10.15.2** is the **intermediate image** based on an **alpine parent or base image**.
 
-when this image is built and the run it becomes a container.
+when this image is built and run it becomes a container.
 
 In the next article, we will talk about what each line in this file does container orchestration and various orchestration tools like Kubernetes docker swam etc. We will then do a deep dive into Kubernetes.
