@@ -10,13 +10,12 @@ tags:
 - Docker
 
 ---
-\# Containers
 
-Before now, there existed hardware virtualization technology which made running virtual machines possible, this solved a lot of problems but it had its challenges. It wasted resources and all that. we won't get too much into it. To solve some of those challenges, containers entered the mix. 
+Before now, there existed hardware virtualization technology which made running virtual machines possible, this solved a lot of problems but it had its challenges. It wasted resources and all that. we won't get too much into it. To solve some of those challenges, containers entered the mix.
 
 !\[super-table.jpg\](![](https://cdn.hashnode.com/res/hashnode/image/upload/v1601235648586/WchQK8YIf.jpeg))
 
-\## What exactly are containers. 
+\## What exactly are containers.
 
 Containers have existed within operating systems for quite a long time. A container is the runtime instantiation of a **Container Image**. A container is a standard Linux process typically created through a clone() system call instead of fork() or exec(). Also, containers are often isolated further through the use of cgroups, SELinux or AppArmor.
 
@@ -38,9 +37,9 @@ some of the most popular container runtime include:
 
 \-  \[crun \]([https://github.com/giuseppe/crun](https://github.com/giuseppe/crun "https://github.com/giuseppe/crun"))
 
-\-  \[railcar\]([https://github.com/oracle/railcar](https://github.com/oracle/railcar "https://github.com/oracle/railcar")) 
+\-  \[railcar\]([https://github.com/oracle/railcar](https://github.com/oracle/railcar "https://github.com/oracle/railcar"))
 
-\-  \[katacontainers\]([https://katacontainers.io/](https://katacontainers.io/ "https://katacontainers.io/")) 
+\-  \[katacontainers\]([https://katacontainers.io/](https://katacontainers.io/ "https://katacontainers.io/"))
 
 \## Container Engines
 
@@ -48,7 +47,7 @@ We have been talking about this for a while now what exactly it is?
 
 A container engine is a piece of software that accepts user requests, including command-line options, pulls container images, and from the end user’s perspective runs the container. There are many container engines, including docker, RKT, CRI-O, and LXD. Also, many cloud providers, Platforms as a Service (PaaS), and Container Platforms have their own built-in container engines which consume Docker or OCI compliant Container Images. Having an industry-standard Container Image Format allows interoperability between all of these different platforms.
 
-Going one layer deeper, most container engines don’t actually run the containers, they rely on an OCI compliant runtime like runc. 
+Going one layer deeper, most container engines don’t actually run the containers, they rely on an OCI compliant runtime like runc.
 
 \## Container Image
 
@@ -94,11 +93,11 @@ The application image is compiled from file system layers built onto an intermed
 
 Now that we have gone over most of the terminologies, how does docker come into the mix?
 
-Docker is a **container engine** that is based on the **runc **container runtime. In simple terms, Docker packages your application code into images and then run them as containers. These images can run on any system or server that runs the Docker daemon. You can begin to see the advantage of this. Basically, you don't have to worry about OS-level configurations and dependencies as you would when using Virtual Machines. 
+Docker is a **container engine** that is based on the **runc **container runtime. In simple terms, Docker packages your application code into images and then run them as containers. These images can run on any system or server that runs the Docker daemon. You can begin to see the advantage of this. Basically, you don't have to worry about OS-level configurations and dependencies as you would when using Virtual Machines.
 
 \## Docker Images  and Docker Containers
 
-what exactly is a docker image? A Docker image is a file (called Dockerfile), comprised of multiple layers, that is used to execute code in a Docker container. A running instance of a docker image is called a docker container. 
+what exactly is a docker image? A Docker image is a file (called Dockerfile), comprised of multiple layers, that is used to execute code in a Docker container. A running instance of a docker image is called a docker container.
 
 A typical example of a docker image looks like this
 
@@ -120,10 +119,10 @@ EXPOSE 4002
 
 CMD npm start
 
-\`\`\` 
+\`\`\`
 
 From the Dockerfile above you can see the different type of images will discuss above. This whole Dockerfile will be built into an **application image**. The **node 10.15.2** is the **intermediate image** based on an **alpine parent or base image**.
 
-when this image is built and the run it becomes a container. 
+when this image is built and the run it becomes a container.
 
 In the next article, we will talk about what each line in this file does container orchestration and various orchestration tools like Kubernetes docker swam etc. We will then do a deep dive into Kubernetes.
