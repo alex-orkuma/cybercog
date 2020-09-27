@@ -100,25 +100,21 @@ what exactly is a docker image? A Docker image is a file (called Dockerfile), co
 
 A typical example of a docker image looks like this
 
-\`\`\`
+    FROM node:10.15.2-alpine
 
-FROM node:10.15.2-alpine
+    WORKDIR /usr/src/app
 
-WORKDIR /usr/src/app
+    COPY package.json ./
 
-COPY package.json ./
+    COPY .babelrc ./
 
-COPY .babelrc ./
+    RUN npm install
 
-RUN npm install
+    COPY --from=appbuild /usr/src/app/dist ./dist
 
-COPY --from=appbuild /usr/src/app/dist ./dist
+    EXPOSE 4002
 
-EXPOSE 4002
-
-CMD npm start
-
-\`\`\`
+    CMD npm start
 
 From the Dockerfile above you can see the different type of images will discuss above. This whole Dockerfile will be built into an **application image**. The **node 10.15.2** is the **intermediate image** based on an **alpine parent or base image**.
 
