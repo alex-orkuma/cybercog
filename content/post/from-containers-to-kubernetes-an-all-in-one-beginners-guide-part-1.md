@@ -8,7 +8,6 @@ tags:
 - 'Kubernetes '
 - 'Containers '
 - Docker
-draft: true
 
 ---
 \# Containers
