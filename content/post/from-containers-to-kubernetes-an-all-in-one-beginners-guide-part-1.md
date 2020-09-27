@@ -11,11 +11,10 @@ tags:
 
 ---
 
-Before now, there existed hardware virtualization technology which made running virtual machines possible, this solved a lot of problems but it had its challenges. It wasted resources and all that. we won't get too much into it. To solve some of those challenges, containers entered the mix.
+Before now, there existed hardware virtualization technology which made running virtual machines possible, this solved a lot of problems but it had its challenges. It wasted resources and all that. we won't get too much into it. To solve some of those challenges, containers entered the mix.  
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1601235648586/WchQK8YIf.jpeg)
 
-!\[super-table.jpg\](![](https://cdn.hashnode.com/res/hashnode/image/upload/v1601235648586/WchQK8YIf.jpeg))
-
-\## What exactly are containers.
+\##What exactly are containers.
 
 Containers have existed within operating systems for quite a long time. A container is the runtime instantiation of a **Container Image**. A container is a standard Linux process typically created through a clone() system call instead of fork() or exec(). Also, containers are often isolated further through the use of cgroups, SELinux or AppArmor.
 
