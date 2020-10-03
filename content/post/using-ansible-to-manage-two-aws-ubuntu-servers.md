@@ -109,9 +109,7 @@ the output should look something like this.
 
 ![/uploads/ansi.png](https://app.forestry.io/sites/rmreowx0yfjbvg/body-media//uploads/ansi.png)
 
-### 
-
-Step 4 — Create SSH Keys with OpenSSH
+### Step 4 — Create SSH Keys with OpenSSH
 
 The standard OpenSSH suite of tools contains the utility, which is used to generate key pairs. Run it on your local computer to generate a 2048-bit RSA key pair, which is fine for most uses.
 
@@ -120,7 +118,7 @@ ssh-keygen
 {{< / highlight >}}
 The utility prompts you to select a location for the keys. By default, the keys are stored in the \~/.ssh directory with the filenames id_rsa for the private key and id_rsa.pub for the public key. Using the default locations allows your SSH client to automatically find your SSH keys when authenticating, so we recommend accepting them by pressing ENTER.
 
-### Upload the SSH Public Key to the Ubuntu servers to be controlled.
+### Step 5 - Upload the SSH Public Key to the Ubuntu servers to be controlled.
 
 Generally speaking there are many ways this can be done, however some demand certain conditions are met.
 we could use **ssh-copy-id** but this requires password based access to our VM. ec2 machines by default is configured for passwordless ssh access. if we type
