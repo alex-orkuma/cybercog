@@ -150,3 +150,12 @@ you should have something that looks like this
 ![](/uploads/ss.png)
 
 repeat the same procedure for the other VM, and add the public key to authorized keys.
+
+Once the authorized_keys file contains the public key, you need to update permissions on some of the files. The ~/.ssh directory and authorized_keys file must have specific restricted permissions (700 for ~/.ssh and 600 for authorized_keys). If they don't, you won't be able to log in.
+
+Make sure the permissions and ownership of the files are correct.
+run the following on both ec2 machines
+{< highlight bashrc  >}}
+chmod -R go= ~/.ssh
+chown -R $USER:$USER ~/.ssh
+{{< / highlight >}}
