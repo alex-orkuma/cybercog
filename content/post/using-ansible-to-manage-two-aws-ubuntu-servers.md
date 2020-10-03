@@ -53,13 +53,23 @@ To begin using Ansible as a means of managing your server infrastructure, you ne
 
 From your control node, run the following command to include the official project’s PPA (personal package archive) in your system’s list of sources:
 
-{{< highlight bashrc  >}} sudo apt-add-repository ppa:ansible/ansible {{< / highlight >}}
+{{< highlight bashrc  >}} 
+sudo apt-add-repository ppa:ansible/ansible 
+{{< / highlight >}}
 
-Press ENTER when prompted to accept the PPA addition. Next, refresh your system’s package index so that it is aware of the packages available in the newly included PPA: {{< highlight bashrc  >}} sudo apt update {{< / highlight >}}
+Press ENTER when prompted to accept the PPA addition. Next, refresh your system’s package index so that it is aware of the packages available in the newly included PPA: 
+
+{{< highlight bashrc  >}} 
+sudo apt update 
+{{< / highlight >}}
 
 Following this update, you can install the Ansible software with:
 
-{{< highlight bashrc  >}} sudo apt install ansible {{< / highlight >}} Your Ansible control node now has all of the software required to administer your hosts. Next, we will go over how to add your hosts to the control node’s inventory file so that it can control them.
+{{< highlight bashrc  >}} 
+sudo apt install ansible 
+{{< / highlight >}} 
+
+Your Ansible control node now has all of the software required to administer your hosts. Next, we will go over how to add your hosts to the control node’s inventory file so that it can control them.
 
 ### Step 3 — Setting Up the Inventory File
 
@@ -67,7 +77,9 @@ The inventory file contains information about the hosts you’ll manage with Ans
 
 To edit the contents of your default Ansible inventory, open the /etc/ansible/hosts file using your text editor of choice, on your Ansible Control Node:
 
-{< highlight bashrc  >}} sudo nano /etc/ansible/hosts {{< / highlight >}}
+{< highlight bashrc  >}} 
+sudo nano /etc/ansible/hosts  
+{{< / highlight >}}
 
 then edit the file to look like this
 
