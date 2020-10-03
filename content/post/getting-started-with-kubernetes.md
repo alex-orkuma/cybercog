@@ -3,7 +3,6 @@ title: Getting Started with Kubernetes
 subtitle: All you need to know about Kubernetes to get started
 date: 2020-10-02T23:00:00+00:00
 tags: []
-draft: true
 
 ---
 ## Why Kubernetes
