@@ -131,3 +131,5 @@ ssh-copy-id ubuntu@52.12.133.253
 we should get a **Permission denied (publickey)** error like so
 
 ![](/uploads/permission.png)
+
+the best way to do this is to add the key manually to the VMs
