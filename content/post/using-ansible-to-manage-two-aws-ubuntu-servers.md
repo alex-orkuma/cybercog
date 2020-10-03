@@ -148,3 +148,5 @@ Paste the contents of your SSH key output you copied into the file by right-clic
 you should have something that looks like this
 
 ![](/uploads/ss.png)
+
+repeat the same procedure for the other VM, and add the public key to authorized keys.
