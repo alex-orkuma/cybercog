@@ -43,7 +43,9 @@ It communicates over normal SSH channels to retrieve information from remote sys
 
 #### Connect to one of the Ec2 instances
 
-![](/uploads/screenshot-from-2020-10-03-22-09-03.png)on the ec2 dashboard, right-click on one of the ec2 instances and click connect, follow the instructions to connect to your ec2 machine using ssh. The commands you run should look something like this.![](/uploads/screenshot-from-2020-10-03-22-12-04.png)
+![/uploads/screenshot-from-2020-10-03-22-09-03.png](https://app.forestry.io/sites/rmreowx0yfjbvg/body-media//uploads/screenshot-from-2020-10-03-22-09-03.png)
+
+on the ec2 dashboard, right-click on one of the ec2 instances and click connect, follow the instructions to connect to your ec2 machine using ssh. The commands you run should look something like this.![/uploads/screenshot-from-2020-10-03-22-12-04.png](https://app.forestry.io/sites/rmreowx0yfjbvg/body-media//uploads/screenshot-from-2020-10-03-22-12-04.png)
 
 ### Step 2 — Installing Ansible
 
@@ -51,52 +53,42 @@ To begin using Ansible as a means of managing your server infrastructure, you ne
 
 From your control node, run the following command to include the official project’s PPA (personal package archive) in your system’s list of sources:
 
-{{< highlight bashrc  >}}
-sudo apt-add-repository ppa:ansible/ansible
-{{< / highlight >}}
+{{< highlight bashrc  >}} sudo apt-add-repository ppa:ansible/ansible {{< / highlight >}}
 
-Press ENTER when prompted to accept the PPA addition.
-Next, refresh your system’s package index so that it is aware of the packages available in the newly included PPA:
-{{< highlight bashrc  >}}
-sudo apt update
-{{< / highlight >}}
+Press ENTER when prompted to accept the PPA addition. Next, refresh your system’s package index so that it is aware of the packages available in the newly included PPA: {{< highlight bashrc  >}} sudo apt update {{< / highlight >}}
 
 Following this update, you can install the Ansible software with:
 
-{{< highlight bashrc  >}}
-sudo apt install ansible
-{{< / highlight >}}
-Your Ansible control node now has all of the software required to administer your hosts. Next, we will go over how to add your hosts to the control node’s inventory file so that it can control them.
+{{< highlight bashrc  >}} sudo apt install ansible {{< / highlight >}} Your Ansible control node now has all of the software required to administer your hosts. Next, we will go over how to add your hosts to the control node’s inventory file so that it can control them.
 
 ### Step 3 — Setting Up the Inventory File
 
-The inventory file contains information about the hosts you’ll manage with Ansible. You can include anywhere from one to several hundred servers in your inventory file, and hosts can be organized into groups and subgroups. The inventory file is also often used to set variables that will be valid only for specific hosts or groups, in order to be used within playbooks and templates. Some variables can also affect the way a playbook is run, like the ansible_python_interpreter variable that we’ll see in a moment.
+The inventory file contains information about the hosts you’ll manage with Ansible. You can include anywhere from one to several hundred servers in your inventory file, and hosts can be organized into groups and subgroups. The inventory file is also often used to set variables that will be valid only for specific hosts or groups, to be used within playbooks and templates. Some variables can also affect the way a playbook is run, like the ansible_python_interpreter variable that we’ll see in a moment.
 
 To edit the contents of your default Ansible inventory, open the /etc/ansible/hosts file using your text editor of choice, on your Ansible Control Node:
 
-{< highlight bashrc  >}} 
-sudo nano /etc/ansible/hosts 
-{{< / highlight >}} 
+{< highlight bashrc  >}} sudo nano /etc/ansible/hosts {{< / highlight >}}
 
-then edit the file to look like this![](/uploads/ansible.png)by adding the following lines of code to it.
+then edit the file to look like this
 
-{< highlight bashrc  >}} 
-"under the **Webserver** section, remove the # and  add this"
-server1 ansible_host=ubuntu@54.212.128.245
-server2 ansible_host=ubuntu@52.12.133.253
+![/uploads/ansible.png](https://app.forestry.io/sites/rmreowx0yfjbvg/body-media//uploads/ansible.png)
 
-"add a new section **all:vars** and add the following underneath"
-ansible_python_interpreter=/usr/bin/python3
-{{< / highlight >}} 
+by adding the following lines of code to it.
 
-the **ubuntu@xx.xxx.xxx.xxx** represents your ubuntu virtual machines. ubuntu is the username and the ip addressis the puplic ip address of your vm. By default all ubuntu VMs are created with an ubuntu user with sudo privilages. 
+{< highlight bashrc  >}} "under the **Webserver** section, remove the # and  add this" server1 ansible_host=ubuntu@54.212.128.245 server2 ansible_host=ubuntu@52.12.133.253
 
-The **all:vars** subgroup sets the *ansible_python_interpreter* host parameter that will be valid for all hosts included in this inventory. This parameter makes sure the remote server uses the /usr/bin/python3 Python 3 executable instead of /usr/bin/python (Python 2.7), which is not present on recent Ubuntu versions.
+"add a new section **all:vars** and add the following underneath" ansible_python_interpreter=/usr/bin/python3 {{< / highlight >}}
+
+the **ubuntu@xx.xxx.xxx.xxx** represents your Ubuntu virtual machines. ubuntu is the username and the IP addresses the public IP address of your VM. By default, all ubuntu VMs are created with an ubuntu user with Sudo privileges.
+
+The **all: vars** subgroup sets the _ansible_python_interpreter_ host parameter that will be valid for all hosts included in this inventory. This parameter makes sure the remote server uses the /usr/bin/python3 Python 3 executable instead of /usr/bin/python (Python 2.7), which is not present on recent Ubuntu versions.
 
 When you’re finished, save and close the file by pressing CTRL+X then Y and ENTER to confirm your changes.
 
 Whenever you want to check your inventory, you can run:
 
-{< highlight bashrc  >}} 
-ansible-inventory --list -y
-{{< / highlight >}}
+{< highlight bashrc  >}} ansible-inventory --list -y {{< / highlight >}}
+
+the output should look something like this. 
+
+![/uploads/ansi.png](https://app.forestry.io/sites/rmreowx0yfjbvg/body-media//uploads/ansi.png)
