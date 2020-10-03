@@ -171,3 +171,23 @@ if all goes well, you should see an output that looks like this:
 ![](/uploads/ping.png)
 
 Once you get a `"pong"` reply back from a host, it means you’re ready to run Ansible commands and playbooks on that server.
+
+### Step 6 - Writing Ansible Playbook
+
+#### Getting Started
+
+Before we can move to a more hands-on view of Ansible, it is important that we get acquainted with important terminology and concepts introduced by this tool.
+
+#### Terminology
+
+The following list contains a quick overview of the most relevant terms used by Ansible:
+
+* **Control Node**: the machine where Ansible is installed, responsible for running the provisioning on the servers you are managing.
+* **Inventory**: an `INI` file that contains information about the servers you are managing.
+* **Playbook**: a `YAML` file containing a series of procedures that should be automated.
+* **Task**: a block that defines a single procedure to be executed, e.g.: install a package.
+* **Module**: a module typically abstracts a system task, like dealing with packages or creating and changing files. Ansible has a multitude of built-in modules, but you can also create custom ones.
+* **Role**: a set of related playbooks, templates, and other files, organized in a pre-defined way to facilitate reuse and share.
+* **Play**: provisioning executed from start to finish is called a _play_.
+* **Facts**: global variables containing information about the system, like network interfaces or operating system.
+* **Handlers**: used to trigger service status changes, like restarting or reloading a service.
