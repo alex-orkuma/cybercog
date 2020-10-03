@@ -191,3 +191,5 @@ The following list contains a quick overview of the most relevant terms used by 
 * **Play**: provisioning executed from start to finish is called a _play_.
 * **Facts**: global variables containing information about the system, like network interfaces or operating system.
 * **Handlers**: used to trigger service status changes, like restarting or reloading a service.
+
+  Now let’s have a look at a playbook that will automate the installation of an Apache webserver within an Ubuntu 18.04 system.
