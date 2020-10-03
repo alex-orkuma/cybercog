@@ -67,3 +67,34 @@ Following this update, you can install the Ansible software with:
 sudo apt install ansible
 {{< / highlight >}}
 Your Ansible control node now has all of the software required to administer your hosts. Next, we will go over how to add your hosts to the control node’s inventory file so that it can control them.
+
+### Step 3 — Setting Up the Inventory File
+
+The inventory file contains information about the hosts you’ll manage with Ansible. You can include anywhere from one to several hundred servers in your inventory file, and hosts can be organized into groups and subgroups. The inventory file is also often used to set variables that will be valid only for specific hosts or groups, in order to be used within playbooks and templates. Some variables can also affect the way a playbook is run, like the ansible_python_interpreter variable that we’ll see in a moment.
+
+To edit the contents of your default Ansible inventory, open the /etc/ansible/hosts file using your text editor of choice, on your Ansible Control Node:
+
+{< highlight bashrc  >}} 
+sudo nano /etc/ansible/hosts 
+{{< / highlight >}} 
+
+then edit the file to look like this![](/uploads/ansible.png)by adding the following lines of code to it.
+
+{< highlight bashrc  >}} 
+"under the **Webserver** section, remove the # and  add this"
+server1 ansible_host=ubuntu@54.212.128.245
+server2 ansible_host=ubuntu@52.12.133.253
+
+"add a new section **all:vars** and add the following underneath"
+ansible_python_interpreter=/usr/bin/python3
+{{< / highlight >}} 
+
+The **all:vars** subgroup sets the *ansible_python_interpreter* host parameter that will be valid for all hosts included in this inventory. This parameter makes sure the remote server uses the /usr/bin/python3 Python 3 executable instead of /usr/bin/python (Python 2.7), which is not present on recent Ubuntu versions.
+
+When you’re finished, save and close the file by pressing CTRL+X then Y and ENTER to confirm your changes.
+
+Whenever you want to check your inventory, you can run:
+
+{< highlight bashrc  >}} 
+ansible-inventory --list -y
+{{< / highlight >}} 
