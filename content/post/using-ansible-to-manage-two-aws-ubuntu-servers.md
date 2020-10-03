@@ -169,3 +169,5 @@ ansible all -m ping -u ubuntu
 if all goes well, you should see an output that looks like this:
 
 ![](/uploads/ping.png)
+
+Once you get a `"pong"` reply back from a host, it means you’re ready to run Ansible commands and playbooks on that server.
