@@ -219,5 +219,4 @@ The following list contains a quick overview of the most relevant terms used by 
   handlers:
     - name: restart apache
       service: name=apache2 state=restarted
-
 {{< / highlight >}}
