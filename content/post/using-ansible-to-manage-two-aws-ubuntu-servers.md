@@ -118,3 +118,6 @@ The standard OpenSSH suite of tools contains the utility, which is used to gener
 ssh-keygen
 {{< / highlight >}}
 The utility prompts you to select a location for the keys. By default, the keys are stored in the ~/.ssh directory with the filenames id_rsa for the private key and id_rsa.pub for the public key. Using the default locations allows your SSH client to automatically find your SSH keys when authenticating, so we recommend accepting them by pressing ENTER.
+
+###  Upload the SSH Public Key to the Ubuntu servers to be controlled. 
+Generally speaking there are many ways this can be done, however some demand certain conditions are met.
