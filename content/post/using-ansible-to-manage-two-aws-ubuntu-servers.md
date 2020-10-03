@@ -220,3 +220,24 @@ The following list contains a quick overview of the most relevant terms used by 
     - name: restart apache
       service: name=apache2 state=restarted
 {{< / highlight >}}
+
+Let’s examine each portion of this playbook in more detail:
+
+hosts: all
+The playbook starts by stating that it should be applied to all hosts in your inventory (hosts: all). It is possible to restrict the playbook’s execution to a specific host, or a group of hosts. This option can be overwritten at execution time.
+
+become: true
+The become: true portion tells Ansible to use privilege escalation (sudo) for executing all the tasks in this playbook. This option can be overwritten on a task-by-task basis.
+
+vars
+Defines a variable, doc_root, which is later used in a task. This section could contain multiple variables.
+
+tasks
+The section where the actual tasks are defined. The first task updates the apt cache, and the second task installs the package apache2.
+
+The third task uses the built-in module file to create a directory to serve as our document root. This module can be used to manage files and directories.
+
+The fourth task uses the module copy to copy a local file to the remote server. We’re copying a simple HTML file to be served as our website hosted by Apache.
+
+handlers
+Finally, we have the handlers section, where the services are declared. We define the restart apache handler that is notified from the fourth task, where the Apache template is applied.
