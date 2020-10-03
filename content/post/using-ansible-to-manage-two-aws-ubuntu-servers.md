@@ -92,3 +92,8 @@ Whenever you want to check your inventory, you can run:
 the output should look something like this. 
 
 ![/uploads/ansi.png](https://app.forestry.io/sites/rmreowx0yfjbvg/body-media//uploads/ansi.png)
+
+###   
+Step 4 — Create SSH Keys with OpenSSH
+
+The standard OpenSSH suite of tools contains the utility, which is used to generate key pairs. Run it on your local computer to generate a 2048-bit RSA key pair, which is fine for most uses.
