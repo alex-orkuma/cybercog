@@ -89,6 +89,8 @@ server2 ansible_host=ubuntu@52.12.133.253
 ansible_python_interpreter=/usr/bin/python3
 {{< / highlight >}} 
 
+the **ubuntu@xx.xxx.xxx.xxx** represents your ubuntu virtual machines. ubuntu is the username and the ip addressis the puplic ip address of your vm. By default all ubuntu VMs are created with an ubuntu user with sudo privilages. 
+
 The **all:vars** subgroup sets the *ansible_python_interpreter* host parameter that will be valid for all hosts included in this inventory. This parameter makes sure the remote server uses the /usr/bin/python3 Python 3 executable instead of /usr/bin/python (Python 2.7), which is not present on recent Ubuntu versions.
 
 When you’re finished, save and close the file by pressing CTRL+X then Y and ENTER to confirm your changes.
@@ -97,4 +99,4 @@ Whenever you want to check your inventory, you can run:
 
 {< highlight bashrc  >}} 
 ansible-inventory --list -y
-{{< / highlight >}} 
+{{< / highlight >}}
