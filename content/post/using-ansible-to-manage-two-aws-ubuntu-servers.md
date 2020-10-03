@@ -160,3 +160,10 @@ run the following on both ec2 machines
 chmod -R go= ~/.ssh
 chown -R $USER:$USER ~/.ssh
 {{< / highlight >}}
+
+now test if you can connect to the servers. From your local machine or Ansible control node, run:
+
+{< highlight bashrc  >}}
+ansible all -m ping -u ubuntu
+{{< / highlight >}}
+if all goes well, you should see an output that looks like this:
