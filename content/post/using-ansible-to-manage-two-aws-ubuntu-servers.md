@@ -134,15 +134,17 @@ the best way to do this is to add the key manually to the VMs
 In you terminal type
 
 {{< highlight bashrc  >}}
-cat ~/.ssh/id_rsa.pub
+cat \~/.ssh/id_rsa.pub
 {{< / highlight >}}
 Copy the output.
-ssh into the Ubuntu VMs using your local terminal as highlighted above. 
+ssh into the Ubuntu VMs using your local terminal as highlighted above.
 
-On one of the VMs, type 
+On one of the VMs, type
 {< highlight bashrc  >}}
-nano ~/.ssh/authorized_keys
+nano \~/.ssh/authorized_keys
 {{< / highlight >}}
 
 Paste the contents of your SSH key output you copied into the file by right-clicking in your terminal and choosing Paste or by using a keyboard shortcut like CTRL+SHIFT+V. Then, save and close the file. In nano, save by pressing CTRL+O and then ENTER, and exit by pressing CTRL+X.
 you should have something that looks like this
+
+![](/uploads/ss.png)
