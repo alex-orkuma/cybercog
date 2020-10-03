@@ -155,6 +155,7 @@ Once the authorized_keys file contains the public key, you need to update permis
 
 Make sure the permissions and ownership of the files are correct.
 run the following on both ec2 machines
+
 {< highlight bashrc  >}}
 chmod -R go= ~/.ssh
 chown -R $USER:$USER ~/.ssh
