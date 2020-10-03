@@ -87,9 +87,11 @@ then edit the file to look like this
 
 by adding the following lines of code to it.
 
-{< highlight bashrc  >}} "under the **Webserver** section, remove the # and  add this" server1 ansible_host=ubuntu@54.212.128.245 server2 ansible_host=ubuntu@52.12.133.253
+{< highlight bashrc  >}} 
+"under the **Webserver** section, remove the # and  add this" server1 ansible_host=ubuntu@54.212.128.245 server2 ansible_host=ubuntu@52.12.133.253
 
-"add a new section **all:vars** and add the following underneath" ansible_python_interpreter=/usr/bin/python3 {{< / highlight >}}
+"add a new section **all:vars** and add the following underneath" ansible_python_interpreter=/usr/bin/python3 
+{{< / highlight >}}
 
 the **ubuntu@xx.xxx.xxx.xxx** represents your Ubuntu virtual machines. ubuntu is the username and the IP addresses the public IP address of your VM. By default, all ubuntu VMs are created with an ubuntu user with Sudo privileges.
 
@@ -99,7 +101,9 @@ When you’re finished, save and close the file by pressing CTRL+X then Y and EN
 
 Whenever you want to check your inventory, you can run:
 
-{< highlight bashrc  >}} ansible-inventory --list -y {{< / highlight >}}
+{< highlight bashrc  >}} 
+ansible-inventory --list -y 
+{{< / highlight >}}
 
 the output should look something like this. 
 
