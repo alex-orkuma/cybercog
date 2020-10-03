@@ -53,21 +53,21 @@ To begin using Ansible as a means of managing your server infrastructure, you ne
 
 From your control node, run the following command to include the official project’s PPA (personal package archive) in your system’s list of sources:
 
-{{< highlight bashrc  >}} 
-sudo apt-add-repository ppa:ansible/ansible 
+{{< highlight bashrc  >}}
+sudo apt-add-repository ppa:ansible/ansible
 {{< / highlight >}}
 
-Press ENTER when prompted to accept the PPA addition. Next, refresh your system’s package index so that it is aware of the packages available in the newly included PPA: 
+Press ENTER when prompted to accept the PPA addition. Next, refresh your system’s package index so that it is aware of the packages available in the newly included PPA:
 
-{{< highlight bashrc  >}} 
-sudo apt update 
+{{< highlight bashrc  >}}
+sudo apt update
 {{< / highlight >}}
 
 Following this update, you can install the Ansible software with:
 
-{{< highlight bashrc  >}} 
-sudo apt install ansible 
-{{< / highlight >}} 
+{{< highlight bashrc  >}}
+sudo apt install ansible
+{{< / highlight >}}
 
 Your Ansible control node now has all of the software required to administer your hosts. Next, we will go over how to add your hosts to the control node’s inventory file so that it can control them.
 
@@ -77,7 +77,7 @@ The inventory file contains information about the hosts you’ll manage with Ans
 
 To edit the contents of your default Ansible inventory, open the /etc/ansible/hosts file using your text editor of choice, on your Ansible Control Node:
 
-{< highlight bashrc  >}} 
+{< highlight bashrc  >}}
 sudo nano /etc/ansible/hosts  
 {{< / highlight >}}
 
@@ -87,10 +87,10 @@ then edit the file to look like this
 
 by adding the following lines of code to it.
 
-{< highlight bashrc  >}} 
+{< highlight bashrc  >}}
 "under the **Webserver** section, remove the # and  add this" server1 ansible_host=ubuntu@54.212.128.245 server2 ansible_host=ubuntu@52.12.133.253
 
-"add a new section **all:vars** and add the following underneath" ansible_python_interpreter=/usr/bin/python3 
+"add a new section **all:vars** and add the following underneath" ansible_python_interpreter=/usr/bin/python3
 {{< / highlight >}}
 
 the **ubuntu@xx.xxx.xxx.xxx** represents your Ubuntu virtual machines. ubuntu is the username and the IP addresses the public IP address of your VM. By default, all ubuntu VMs are created with an ubuntu user with Sudo privileges.
@@ -101,23 +101,33 @@ When you’re finished, save and close the file by pressing CTRL+X then Y and EN
 
 Whenever you want to check your inventory, you can run:
 
-{< highlight bashrc  >}} 
-ansible-inventory --list -y 
+{< highlight bashrc  >}}
+ansible-inventory --list -y
 {{< / highlight >}}
 
-the output should look something like this. 
+the output should look something like this.
 
 ![/uploads/ansi.png](https://app.forestry.io/sites/rmreowx0yfjbvg/body-media//uploads/ansi.png)
 
-###   
+### 
+
 Step 4 — Create SSH Keys with OpenSSH
 
 The standard OpenSSH suite of tools contains the utility, which is used to generate key pairs. Run it on your local computer to generate a 2048-bit RSA key pair, which is fine for most uses.
 
-{{< highlight bashrc  >}} 
+{{< highlight bashrc  >}}
 ssh-keygen
 {{< / highlight >}}
-The utility prompts you to select a location for the keys. By default, the keys are stored in the ~/.ssh directory with the filenames id_rsa for the private key and id_rsa.pub for the public key. Using the default locations allows your SSH client to automatically find your SSH keys when authenticating, so we recommend accepting them by pressing ENTER.
+The utility prompts you to select a location for the keys. By default, the keys are stored in the \~/.ssh directory with the filenames id_rsa for the private key and id_rsa.pub for the public key. Using the default locations allows your SSH client to automatically find your SSH keys when authenticating, so we recommend accepting them by pressing ENTER.
 
-###  Upload the SSH Public Key to the Ubuntu servers to be controlled. 
+### Upload the SSH Public Key to the Ubuntu servers to be controlled.
+
 Generally speaking there are many ways this can be done, however some demand certain conditions are met.
+we could use **ssh-copy-id** but this requires password based access to our VM. ec2 machines by default is configured for passwordless ssh access. if we type
+
+{{< highlight bashrc  >}}
+ssh-copy-id ubuntu@52.12.133.253
+{{< / highlight >}}
+we should get a **Permission denied (publickey)** error like so
+
+![](/uploads/permission.png)
