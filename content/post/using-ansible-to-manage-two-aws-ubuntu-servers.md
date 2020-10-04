@@ -240,3 +240,6 @@ Finally, we have the handlers section, where the services are declared. We defin
 
 To get the playbook and all the files necessary for the tutorial to work, download the code repository on [GitHub](https://github.com/alex-orkuma/Ansible.git) and copy all the files and folders from the Ansible folder to your home directory where you are running your playbook.
 
+#### Running a Playbook
+
+Once you get the contents of this playbook downloaded to your Ansible control node, you can use `ansible-playbook` to execute it on one or more nodes from your inventory. The following command will execute the playbook on **all** hosts from your default inventory file, using SSH key pair authentication to connect as the current system user:
