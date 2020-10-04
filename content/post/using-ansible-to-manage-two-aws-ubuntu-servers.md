@@ -248,3 +248,5 @@ Once you get the contents of this playbook downloaded to your Ansible control no
 ansible-playbook playbook.yml
 {{< / highlight >}}
 if all goes well, you should see the following output
+
+![](/uploads/screenshot-from-2020-10-04-00-46-49.png)
