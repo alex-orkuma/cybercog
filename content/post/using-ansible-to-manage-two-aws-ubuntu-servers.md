@@ -90,7 +90,6 @@ by adding the following lines of code to it.
 
 {< highlight bashrc  >}}
 "under the **Webserver** section, remove the # and  add this" server1 ansible_host=ubuntu@54.212.128.245 server2 ansible_host=ubuntu@52.12.133.253
-
 "add a new section **all:vars** and add the following underneath" ansible_python_interpreter=/usr/bin/python3
 {{< / highlight >}}
 
