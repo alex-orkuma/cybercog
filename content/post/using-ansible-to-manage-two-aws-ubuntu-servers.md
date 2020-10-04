@@ -243,3 +243,8 @@ To get the playbook and all the files necessary for the tutorial to work, downlo
 #### Running a Playbook
 
 Once you get the contents of this playbook downloaded to your Ansible control node, you can use `ansible-playbook` to execute it on one or more nodes from your inventory. The following command will execute the playbook on **all** hosts from your default inventory file, using SSH key pair authentication to connect as the current system user:
+
+{< highlight bashrc  >}}
+ansible-playbook playbook.yml
+{{< / highlight >}}
+if all goes well, you should see the following output
