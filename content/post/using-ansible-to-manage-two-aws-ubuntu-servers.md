@@ -9,7 +9,6 @@ tags:
 - aws
 - ubuntu
 - Ansible
-draft: true
 
 ---
 ## Business Problem
