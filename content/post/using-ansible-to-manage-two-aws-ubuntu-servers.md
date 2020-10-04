@@ -22,7 +22,8 @@ Ansible is a configuration management tool that is designed to automate controll
 
 In this guide, you will learn
 
-* You will learn how to use Ansible to control, configure and install docker on many ubuntu servers hosted on AWS
+* You will learn how to use Ansible to control, configure and install  Apache on many ubuntu servers hosted on AWS
+* serve a static HTML page on apache using the playbook
 * You will how to write your ansible-playbook
 * you will learn more AWS and cloud computing
 
@@ -252,3 +253,9 @@ if all goes well, you should see the following output
 ![](/uploads/screenshot-from-2020-10-04-00-46-49.png)
 
 If you get an error, double-check and make sure the files are in the right directories and the public key of your control node is present on all the servers you want to control. 
+
+#### Check Results
+
+navigate to AWS console, copy the IP address of any of the servers and run it in the browser, you should see the index.html file we add in the playbook. The output should look something like this.
+
+![](/uploads/screenshot-from-2020-10-04-01-13-05.png)
