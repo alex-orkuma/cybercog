@@ -250,3 +250,5 @@ ansible-playbook playbook.yml
 if all goes well, you should see the following output
 
 ![](/uploads/screenshot-from-2020-10-04-00-46-49.png)
+
+If you get an error, double-check and make sure the files are in the right directories and the public key of your control node is present on all the servers you want to control. 
