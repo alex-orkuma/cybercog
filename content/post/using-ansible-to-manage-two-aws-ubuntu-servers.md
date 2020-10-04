@@ -3,14 +3,14 @@ title: Using Ansible to Manage Two AWS Ubuntu Servers
 subtitle: Getting started with Ansible
 date: 2020-10-02T23:00:00+00:00
 tags:
-- playbooks
-- ssh
-- cloud computing
-- aws
-- ubuntu
-- Ansible
-
+  - playbooks
+  - ssh
+  - cloud computing
+  - aws
+  - ubuntu
+  - Ansible
 ---
+
 ## Business Problem
 
 You are an IT administrator for company **XYZ,** you configure, manage, update, and provision servers on weekly basis. For the most part, you do it manually and use a bash script to automate a few things. The head of IT asks you to look for a way to automate this whole process.
@@ -21,10 +21,10 @@ Ansible is a configuration management tool that is designed to automate controll
 
 In this guide, you will learn
 
-* You will learn how to use Ansible to control, configure and install  Apache on many ubuntu servers hosted on AWS
-* serve a static HTML page on apache using the playbook
-* You will how to write your ansible-playbook
-* you will learn more AWS and cloud computing
+- You will learn how to use Ansible to control, configure and install Apache on many ubuntu servers hosted on AWS
+- serve a static HTML page on apache using the playbook
+- You will how to write your ansible-playbook
+- you will learn more AWS and cloud computing
 
 ## How Does Ansible Work?
 
@@ -34,13 +34,13 @@ It communicates over normal SSH channels to retrieve information from remote sys
 
 ### Step 1- setting up AWS instances
 
-* To begin, log in to your AWS console, navigate to ec2 and select lunch an instance
-* On the Choose AMI (Amazon machine image Page), select **Ubuntu Server 18.04 LTS (HVM), SSD Volume Type**
-* Next instance type select **t2.micro**
-* Next on the configure instance page, change the number of the instance to 2
-* on the security group page, add an inbound rule from anywhere for HTTP and HTTPs
-* select next, on all the next pages.
-* click lunch, on the lunch page, select **create a new key-pair**, give the key-pair a name, download key then lunch instance.
+- To begin, log in to your AWS console, navigate to ec2 and select lunch an instance
+- On the Choose AMI (Amazon machine image Page), select **Ubuntu Server 18.04 LTS (HVM), SSD Volume Type**
+- Next instance type select **t2.micro**
+- Next on the configure instance page, change the number of the instance to 2
+- on the security group page, add an inbound rule from anywhere for HTTP and HTTPs
+- select next, on all the next pages.
+- click lunch, on the lunch page, select **create a new key-pair**, give the key-pair a name, download key then lunch instance.
 
 #### Connect to one of the Ec2 instances
 
@@ -78,7 +78,7 @@ The inventory file contains information about the hosts you’ll manage with Ans
 
 To edit the contents of your default Ansible inventory, open the /etc/ansible/hosts file using your text editor of choice, on your Ansible Control Node:
 
-{< highlight bashrc  >}}
+{{< highlight bashrc >}}
 sudo nano /etc/ansible/hosts  
 {{< / highlight >}}
 
@@ -88,8 +88,8 @@ then edit the file to look like this
 
 by adding the following lines of code to it.
 
-{< highlight bashrc  >}}
-"under the **Webserver** section, remove the # and  add this" server1 ansible_host=ubuntu@54.212.128.245 server2 ansible_host=ubuntu@52.12.133.253
+{{< highlight bashrc >}}
+"under the **Webserver** section, remove the # and add this" server1 ansible_host=ubuntu@54.212.128.245 server2 ansible_host=ubuntu@52.12.133.253
 "add a new section **all:vars** and add the following underneath" ansible_python_interpreter=/usr/bin/python3
 {{< / highlight >}}
 
@@ -101,7 +101,7 @@ When you’re finished, save and close the file by pressing CTRL+X then Y and EN
 
 Whenever you want to check your inventory, you can run:
 
-{< highlight bashrc  >}}
+{{< highlight bashrc >}}
 ansible-inventory --list -y
 {{< / highlight >}}
 
@@ -140,7 +140,7 @@ Copy the output.
 ssh into the Ubuntu VMs using your local terminal as highlighted above.
 
 On one of the VMs, type
-{< highlight bashrc  >}}
+{{< highlight bashrc >}}
 nano \~/.ssh/authorized_keys
 {{< / highlight >}}
 
@@ -156,14 +156,14 @@ Once the authorized_keys file contains the public key, you need to update permis
 Make sure the permissions and ownership of the files are correct.
 run the following on both ec2 machines
 
-{< highlight bashrc  >}}
+{{< highlight bashrc >}}
 chmod -R go= \~/.ssh
 chown -R $USER:$USER \~/.ssh
 {{< / highlight >}}
 
 now test if you can connect to the servers. From your local machine or Ansible control node, run:
 
-{< highlight bashrc  >}}
+{{< highlight bashrc >}}
 ansible all -m ping -u ubuntu
 {{< / highlight >}}
 if all goes well, you should see an output that looks like this:
@@ -182,38 +182,38 @@ Before we can move to a more hands-on view of Ansible, it is important that we g
 
 The following list contains a quick overview of the most relevant terms used by Ansible:
 
-* **Control Node**: the machine where Ansible is installed, responsible for running the provisioning on the servers you are managing.
-* **Inventory**: an `INI` file that contains information about the servers you are managing.
-* **Playbook**: a `YAML` file containing a series of procedures that should be automated.
-* **Task**: a block that defines a single procedure to be executed, e.g.: install a package.
-* **Module**: a module typically abstracts a system task, like dealing with packages or creating and changing files. Ansible has a multitude of built-in modules, but you can also create custom ones.
-* **Role**: a set of related playbooks, templates, and other files, organized in a pre-defined way to facilitate reuse and share.
-* **Play**: provisioning executed from start to finish is called a _play_.
-* **Facts**: global variables containing information about the system, like network interfaces or operating system.
-* **Handlers**: used to trigger service status changes, like restarting or reloading a service.
+- **Control Node**: the machine where Ansible is installed, responsible for running the provisioning on the servers you are managing.
+- **Inventory**: an `INI` file that contains information about the servers you are managing.
+- **Playbook**: a `YAML` file containing a series of procedures that should be automated.
+- **Task**: a block that defines a single procedure to be executed, e.g.: install a package.
+- **Module**: a module typically abstracts a system task, like dealing with packages or creating and changing files. Ansible has a multitude of built-in modules, but you can also create custom ones.
+- **Role**: a set of related playbooks, templates, and other files, organized in a pre-defined way to facilitate reuse and share.
+- **Play**: provisioning executed from start to finish is called a _play_.
+- **Facts**: global variables containing information about the system, like network interfaces or operating system.
+- **Handlers**: used to trigger service status changes, like restarting or reloading a service.
 
   Now let’s have a look at a playbook that will automate the installation of an Apache webserver within an Ubuntu 18.04 system.
 
-{< highlight yml  >}}
+{{< highlight yml >}}
 
-* hosts: all
+- hosts: all
   become: true
   vars:
   doc_root: /var/www/example
   tasks:
-  * name: Update apt
+  - name: Update apt
     apt: update_cache=yes
-  * name: Install Apache
+  - name: Install Apache
     apt: name=apache2 state=latest
-  * name: Create custom document root
+  - name: Create custom document root
     file: path={{ doc_root }} state=directory owner=www-data group=www-data
-  * name: Set up HTML file
+  - name: Set up HTML file
     copy: src=index.html dest={{ doc_root }}/index.html owner=www-data group=www-data mode=0644
-  * name: Set up Apache virtual host file
+  - name: Set up Apache virtual host file
     template: src=vhost.tpl dest=/etc/apache2/sites-available/000-default.conf
     notify: restart apache
     handlers:
-  * name: restart apache
+  - name: restart apache
     service: name=apache2 state=restarted
     {{< / highlight >}}
 
@@ -244,14 +244,14 @@ To get the playbook and all the files necessary for the tutorial to work, downlo
 
 Once you get the contents of this playbook downloaded to your Ansible control node, you can use `ansible-playbook` to execute it on one or more nodes from your inventory. The following command will execute the playbook on **all** hosts from your default inventory file, using SSH key pair authentication to connect as the current system user:
 
-{< highlight bashrc  >}}
+{{< highlight bashrc >}}
 ansible-playbook playbook.yml
 {{< / highlight >}}
 if all goes well, you should see the following output
 
 ![](/uploads/screenshot-from-2020-10-04-00-46-49.png)
 
-If you get an error, double-check and make sure the files are in the right directories and the public key of your control node is present on all the servers you want to control. 
+If you get an error, double-check and make sure the files are in the right directories and the public key of your control node is present on all the servers you want to control.
 
 #### Check Results
 
