@@ -39,6 +39,7 @@ It communicates over normal SSH channels to retrieve information from remote sys
 * On the Choose AMI (Amazon machine image Page), select **Ubuntu Server 18.04 LTS (HVM), SSD Volume Type**
 * Next instance type select **t2.micro**
 * Next on the configure instance page, change the number of the instance to 2
+* on the security group page, add an inbound rule from anywhere for HTTP and HTTPs
 * select next, on all the next pages.
 * click lunch, on the lunch page, select **create a new key-pair**, give the key-pair a name, download key then lunch instance.
 
