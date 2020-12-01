@@ -3,14 +3,14 @@ title: Using Ansible to Manage Two AWS Ubuntu Servers
 subtitle: Getting started with Ansible
 date: 2020-10-02T23:00:00+00:00
 tags:
-  - playbooks
-  - ssh
-  - cloud computing
-  - aws
-  - ubuntu
-  - Ansible
----
+- playbooks
+- ssh
+- cloud computing
+- aws
+- ubuntu
+- Ansible
 
+---
 ## Business Problem
 
 You are an IT administrator for company **XYZ,** you configure, manage, update, and provision servers on weekly basis. For the most part, you do it manually and use a bash script to automate a few things. The head of IT asks you to look for a way to automate this whole process.
