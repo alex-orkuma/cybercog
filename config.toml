@@ -1,7 +1,7 @@
 baseurl = "/"
 DefaultContentLanguage = "en"
 #DefaultContentLanguage = "ja"
-title = "Cyber Cog"
+title = "Hash Dynamics"
 theme = "beautifulhugo"
 metaDataFormat = "yaml"
 pygmentsStyle = "vim"
@@ -61,7 +61,7 @@ showRelatedPosts = true
 
 [Author]
 name = "Alex O"
-website = "cybercog.co"
+website = "hashdynamics.io"
 email = "orkumashi@gmail.com"
 facebook = "nalexgee"
 github = "alex-orkuma"
