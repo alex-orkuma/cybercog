@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://hashdynamics.io/"
 DefaultContentLanguage = "en"
 #DefaultContentLanguage = "ja"
 title = "Hash Dynamics"
@@ -21,7 +21,8 @@ googleAnalytics = "UA-177778096-1"
 subtitle = "Learn how to build elegant cloud native solutions"
 mainSections = ["post","posts"]
 logo = "img/avatar-icon.png" # Expecting square dimensions
-favicon = "img/favicon.ico"
+navLogo = "https://cybercog.s3.amazonaws.com/Copy+of+hashdynamics.io.png"
+favicon = "https://cybercog.s3.amazonaws.com/favicon.ico"
 dateFormat = "January 2, 2006"
 commit = false
 rss = true
