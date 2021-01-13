@@ -1,8 +1,9 @@
-baseurl = "https://hashdynamics.io/"
+baseurl = "https://hashdynamics.io"
 DefaultContentLanguage = "en"
 #DefaultContentLanguage = "ja"
 title = "Hash Dynamics"
 theme = "beautifulhugo"
+enableRobotsTXT = true
 metaDataFormat = "yaml"
 pygmentsStyle = "vim"
 #pygmentsUseClasses = true
